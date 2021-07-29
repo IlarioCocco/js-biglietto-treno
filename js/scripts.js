@@ -2,16 +2,16 @@
 var numerokm = prompt("quanti km vuoi percorrere ?")
 
 // 2.chiedere l'età del passeggero.//
-var età = prompt("quanti anni hai?")
+var età = prompt("quanti anni hai ?")
 
 // 3.chiedere il prezzo totale del viaggio.//
-var prezzoBiglietto = prompt("prezzo totale biglietto")
+
+
+// il prezzo del biglietto è definito in base ai km(0.21 € al km)//
 
 
 
 
 
-
-// il prezzo del biglietto è definito in base ai km(0.21 € al km)
 // va applicato uno sconto del 20 % per i minorenni
 // va applicato uno sconto del 40 % per gli over 65.
