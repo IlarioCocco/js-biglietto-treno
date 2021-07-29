@@ -5,8 +5,24 @@ var numeroKm = prompt("quanti km vuoi percorrere ?")
 var età = prompt("quanti anni hai ?")
 
 // 3.chiedere il prezzo totale del viaggio.//
-var prezzoTotale = 0.21 * numeroKm;
-alert(prezzoTotale);
+var prezzoBase = 0.21 * numeroKm;
+alert(prezzoBase);
+
+// 4.sconto minorenni
+var scontoMinorenni = prezzoBase / 100 * 20;
+alert(scontoMinorenni);
+
+// 4.sconto over 65
+var scontoOver65 = prezzoBase / 100 * 40;
+alert(scontoOver65);
+
+
+// var prezzoTotale;
+// if ( ) {
+// } else {
+
+// }
+
 
 
 // il prezzo del biglietto è definito in base ai km(0.21 € al km)//
