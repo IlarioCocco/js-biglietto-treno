@@ -12,29 +12,36 @@ console.log(typeof(eta));
 
 // 3.prezzo totale a km effettivo.//
 var prezzoBase = 0.21 * numeroKm;
-document.getElementById("prezzo Base").innerHTML += prezzoBase + " € " + "a Km";
+// document.getElementById("prezzo Base").innerHTML += prezzoBase + " € " + "a Km";
 
-// 4.sconto minorenni//
-var scontoMinorenni = prezzoBase / 100 * 30;
-// 5.sconto over 65//
-var scontoOver65 = prezzoBase / 100 * 50;
-
-// 6.prezzo prezzoMinorenni//
-var prezzoMinorenni = prezzoBase - scontoMinorenni;
-document.getElementById("prezzo Minorenni").innerHTML += prezzoMinorenni + " € ";
-
-// .prezzoOver65//
-var prezzoOver65 = prezzoBase - scontoOver65;
-document.getElementById("prezzo Over65").innerHTML += prezzoOver65 + " € ";  
 
 if (eta < 18) {
-    alert("prezzo per minorenni: " + prezzoMinorenni + " € ");
+    var scontoMinorenni = prezzoBase / 100 * 30;
+    alert("prezzo per minorenni: " + scontoMinorenni + " € ");
+    document.getElementById("prezzo Minorenni").innerHTML += scontoMinorenni + " € " + "a Km";
 
-} else if (eta > 65) {
-    alert("prezzo per over 65 è di: " + prezzoOver65 + " € ");
+} else if (eta >= 65) {
+    var scontoOver65 = prezzoBase / 100 * 50;
+    alert("prezzo per over 65 è di: " + scontoOver65 + " € ");
+    document.getElementById("prezzo Over65").innerHTML += scontoOver65 + " € " + "a Km";
 
 } else {
     alert("prezzo base: " + prezzoBase + " € ");
+    document.getElementById("prezzo Base").innerHTML += prezzoBase + " € " + "a Km";
 }
 
+// step by step
 
+// 4.sconto minorenni//
+// var scontoMinorenni = prezzoBase / 100 * 30;
+
+// 5.sconto over 65//
+// var scontoOver65 = prezzoBase / 100 * 50;
+
+// 6.prezzo prezzoMinorenni//
+// var prezzoMinorenni = prezzoBase - scontoMinorenni;
+// document.getElementById("prezzo Minorenni").innerHTML += prezzoMinorenni + " € ";
+
+// 7.prezzoOver65//
+// var prezzoOver65 = prezzoBase - scontoOver65;
+// document.getElementById("prezzo Over65").innerHTML += prezzoOver65 + " € ";  
